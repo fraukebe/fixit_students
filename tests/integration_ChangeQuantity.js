@@ -52,7 +52,7 @@ describe('REST API', () => {
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
         payload.should.be.an('object').and.contain.keys('statusCode', 'error');
-        payload.error.should.be.a('string').and.equal('Bad Request');
+        payload.error.should.be.a('string').and.equal('Bad');
       });
     });
 
