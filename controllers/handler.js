@@ -27,9 +27,9 @@ module.exports = {
   deleteItem: function(request, reply) {
     try {
       if (!users.hasOwnProperty(request.params.user))
-        reply(boom.notFound())
+        reply(boom.notFound());
       else if (!users[request.params.user].hasOwnProperty(request.params.item))
-                  reply(boom.notFound());
+        reply(boom.notFound());
       else {
         delete users[request.params.user][request.params.item];
         reply(users[request.params.user]);
