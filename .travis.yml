@@ -5,9 +5,10 @@ git:
 cache:
   directories:
   - "./node_modules"
+  - npm run test:integration
 script:
 - npm run lint
 after_script:
 - npm run coverage
 - npm run countLOC:details
-- npm run test:integration
+
